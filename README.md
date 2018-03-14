@@ -7,3 +7,5 @@ Kokeillaan Markdown-muotoilua: *kursivoidaan* ja **lihavoidaan**
 [gitlog.txt](https://github.com/mnnamaria/otm-harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt)
 
 Tehdään muutos paikallisella koneella.
+Tehdään toinen muutos, ei pushata vielä.
+
