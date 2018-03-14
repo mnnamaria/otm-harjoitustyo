@@ -1,0 +1,125 @@
+commit 966cf2ece01cfdcfd68757897e11ac023ed65ba1
+Author: Minna Hirvonen <minna.m.hirvonen@helsinki.fi>
+Date:   Tue Mar 13 15:57:39 2018 +0200
+
+    poisto ja uudelleennimeäminen
+
+ tiedostoja/file1  | 0
+ tiedostoja/file2  | 0
+ tiedostoja/file22 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 6e9e8da1428550cabdfbecf5b51ea65913b1c452
+Author: Minna Hirvonen <minna.m.hirvonen@helsinki.fi>
+Date:   Tue Mar 13 15:52:03 2018 +0200
+
+    poisto ja uudelleennimeäminen
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ tiedostoja/file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit c93342b09ab3ed772b00c04ef3720bbbf314290f
+Author: Minna Hirvonen <minna.m.hirvonen@helsinki.fi>
+Date:   Tue Mar 13 15:41:50 2018 +0200
+
+    muutettiin lisää
+
+ eka.txt    | 3 ++-
+ kolmas.txt | 3 ++-
+ 2 files changed, 4 insertions(+), 2 deletions(-)
+
+commit 33b596f1c14e928e113d9b6203af65bd699b7c5c
+Author: Minna Hirvonen <minna.m.hirvonen@helsinki.fi>
+Date:   Tue Mar 13 15:34:41 2018 +0200
+
+    poisto ja uudelleennimeäminen
+
+ eka.txt      | 7 +++++++
+ tiedosto.txt | 7 -------
+ 2 files changed, 7 insertions(+), 7 deletions(-)
+
+commit e39d220f858332bd99741bf7be8424dfd9ec64a1
+Author: Minna Hirvonen <minna.m.hirvonen@helsinki.fi>
+Date:   Tue Mar 13 15:27:51 2018 +0200
+
+    poisto ja uudelleennimeäminen
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit 1b97a2f7c1e55e76b430b7891d0cca4a9f4c8d17
+Author: Minna Hirvonen <minna.m.hirvonen@helsinki.fi>
+Date:   Tue Mar 13 15:18:47 2018 +0200
+
+    poistettiin osa ja kirjoitettiin lisää
+
+ tiedosto.txt | 16 +++-------------
+ 1 file changed, 3 insertions(+), 13 deletions(-)
+
+commit 4a9c11cbf9e7e086ef827245d32d782fd45605ed
+Author: Minna Hirvonen <minna.m.hirvonen@helsinki.fi>
+Date:   Tue Mar 13 15:09:45 2018 +0200
+
+    kopioitiin tekstiä
+
+ tiedosto.txt | 3 +++
+ 1 file changed, 3 insertions(+)
+
+commit 34768861475e86d6b4c787224d77fa580d3bf611
+Author: Minna Hirvonen <minna.m.hirvonen@helsinki.fi>
+Date:   Tue Mar 13 15:06:59 2018 +0200
+
+    lisätty kopioitua tekstiä
+
+ tiedosto.txt | 13 +++++++++++++
+ 1 file changed, 13 insertions(+)
+
+commit dda8066c338e2ee4cf5cedece9f651fe3d467acd
+Author: Minna Hirvonen <minna.m.hirvonen@helsinki.fi>
+Date:   Tue Mar 13 14:47:14 2018 +0200
+
+    kansio stuff luotu
+
+ stuff/juttu.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 693930071050a16f912fd27a9ddc8c1db61b2bee
+Author: Minna Hirvonen <minna.m.hirvonen@helsinki.fi>
+Date:   Tue Mar 13 14:41:46 2018 +0200
+
+    muokattiin tokaa ja kolmatta
+
+ kolmas.txt | 1 +
+ toinen.txt | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit 3d49eff08956e511df15a0c5862ca15879b0e5f8
+Author: Minna Hirvonen <minna.m.hirvonen@helsinki.fi>
+Date:   Tue Mar 13 14:38:36 2018 +0200
+
+    tiedosto kolmas.txt luotu
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit ede04e4dba38781ca4469469c59f9e704b007607
+Author: Minna Hirvonen <minna.m.hirvonen@helsinki.fi>
+Date:   Tue Mar 13 14:32:46 2018 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit 3e3b8925da1da0a394a4ed4079dd92e7099bc50d
+Author: Minna Hirvonen <minna.m.hirvonen@helsinki.fi>
+Date:   Tue Mar 13 14:27:42 2018 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
