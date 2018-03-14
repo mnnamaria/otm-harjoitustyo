@@ -123,3 +123,4 @@ Date:   Tue Mar 13 14:27:42 2018 +0200
  tiedosto.txt | 0
  1 file changed, 0 insertions(+), 0 deletions(-)
 
+Muutetaan hieman suoraan Githubissa.
