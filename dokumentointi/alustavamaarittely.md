@@ -16,9 +16,11 @@ Pelin perusversiossa on vain yksi käyttäjä, joka asettaa vuorotellen pelilaud
 
 ## Jatkokehitysideoita
 * Pelit tallennetaan myöhempää tarkastelua varten
-* Peruspeliä monimutkaisempi ristinollaversio, esimerkiksi
+* Perusversion monimutkaistaminen
   * Peli konetta vastaan
   * Peli isommalla laudalla
   * Peli mielivaltaisen kokoisella laudalla
-  * Ristinollan muunnelmat, esimerkiksi kolmiulotteinen versio tai yhdeksästä 3x3-ruudukosta koostuva [ultimate tic-tac-toe](https://en.wikipedia.org/wiki/Ultimate_tic-tac-toe)  
+  * Erilaiset ristinollan muunnelmat
+    * Kolmiulotteinen versio
+    * Yhdeksästä 3x3-ruudukosta koostuva [ultimate tic-tac-toe](https://en.wikipedia.org/wiki/Ultimate_tic-tac-toe)  
 
