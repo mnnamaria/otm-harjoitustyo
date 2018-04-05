@@ -14,17 +14,22 @@ import java.util.Scanner;
 
 public class Board {
     private ArrayList<String> board;
+    private Scanner scanner;
     private int tokens;
+    private String winner;
     
-    Board(){
+    public Board(){
         this.board= new ArrayList<String>();
         for (int i = 0; i<9; i++){
             board.add("[ ]");
         }
         this.tokens = 0;
+        this.scanner = new Scanner(System.in);
+        this.winner = null;
     }
     
     public void printBoard(){
+
         System.out.println("----------");
         System.out.println("");
             for (int j = 0; j<9; j++){
@@ -34,77 +39,68 @@ public class Board {
                 }
         }
         System.out.println("----------");
+
     }
     
     public boolean validMove(int position){
         if(position < 1 || position > 9){
+            System.out.println("Number not in range (1-9), choose another position:");
             return false;
         } else if(!board.get(position-1).equals("[ ]")){
+            System.out.println("Position already taken, choose another one:");
             return false;
         } else {
             return true;
         }
     }    
-    
-    public boolean boardFull(){
-        if(tokens ==9){
-            System.out.println("The board is full");
-            return true;
-        } else {
-            return false;
-        }
-    }    
+  
     
     public boolean gameOver(){
-        if(boardFull()){
-            System.out.println("Game over!");
-            return true;
-        } else if (threeInARow("X")){
+        if (threeInARow("X")){
+            System.out.println("Game over, the winner is " + this.winner);
             return true;
         } else if(threeInARow("O")){
+            System.out.println("Game over, the winner is " + this.winner);
+            return true;
+        } else if(tokens==9){
+            System.out.println("Game over, the board is full");
             return true;
         }
-        
         return false;
 
     }
     
     public boolean threeInARow(String token){
         if(board.get(0).equals("["+ token + "]")&&board.get(1).equals("["+ token + "]")&&board.get(2).equals("["+ token + "]")){
-            System.out.println("The winner is " + token);
+            this.winner=token;
             return true;
         } else if (board.get(3).equals("["+ token + "]")&&board.get(4).equals("["+ token + "]")&&board.get(5).equals("["+ token + "]")){
-            System.out.println("The winner is " + token);
+            this.winner=token;
             return true;
         } else if (board.get(6).equals("["+ token + "]")&&board.get(7).equals("["+ token + "]")&&board.get(8).equals("["+ token + "]")){
-            System.out.println("The winner is " + token);
+            this.winner=token;
             return true;
         } else if (board.get(0).equals("["+ token + "]")&&board.get(3).equals("["+ token + "]")&&board.get(6).equals("["+ token + "]")){
-            System.out.println("The winner is " + token);
+            this.winner=token;
             return true;
         } else if (board.get(1).equals("["+ token + "]")&&board.get(4).equals("["+ token + "]")&&board.get(7).equals("["+ token + "]")){
-            System.out.println("The winner is " + token);
+            this.winner=token;
             return true;
         } else if (board.get(2).equals("["+ token + "]")&&board.get(5).equals("["+ token + "]")&&board.get(8).equals("["+ token + "]")){
-            System.out.println("The winner is " + token);
+            this.winner=token;
             return true;
         } else if (board.get(0).equals("["+ token + "]")&&board.get(4).equals("["+ token + "]")&&board.get(8).equals("["+ token + "]")){
-            System.out.println("The winner is " + token);
+            this.winner=token;
             return true;
         }else if (board.get(2).equals("["+ token + "]")&&board.get(4).equals("["+ token + "]")&&board.get(6).equals("["+ token + "]")){
-            System.out.println("The winner is " + token);
+            this.winner=token;
             return true;
         }
         return false;
     }
     
     public void setToBoard(String token, int position){
-        if(boardFull()){
-            System.out.println("Move not valid, the board is full");
-            gameOver();
-        } else if(!validMove(position)){
-            System.out.println("Move not valid, choose another position:");
-            Scanner scanner = new Scanner (System.in);
+        if(!validMove(position)){
             int newPosition = Integer.parseInt(scanner.nextLine());
             setToBoard(token, newPosition);
         } else {
@@ -112,6 +108,10 @@ public class Board {
             board.set(position-1, "["+token+"]");
             printBoard();
         }
+    }
+    
+    public String getWinner(){
+        return this.winner;
     }
 }
 
