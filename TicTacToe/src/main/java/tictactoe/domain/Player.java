@@ -3,20 +3,20 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package tictactoe;
+package tictactoe.domain;
 
 /**
  *
  * @author minnahir
  */
-public class Main {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        Game lauta = new Game();
-        lauta.playGame();
+public class Player {
+    private String token;
+    
+    public Player(String token){
+        this.token=token;
     }
     
+    public String getToken(){
+        return this.token;
+    }
 }

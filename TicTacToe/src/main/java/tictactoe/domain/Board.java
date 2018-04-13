@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package tictactoe;
+package tictactoe.domain;
 
 /**
  *
@@ -17,6 +17,7 @@ public class Board {
     private Scanner scanner;
     private int tokens;
     private String winner;
+    private String message;
     
     public Board(){
         this.board= new ArrayList<String>();
@@ -26,6 +27,7 @@ public class Board {
         this.tokens = 0;
         this.scanner = new Scanner(System.in);
         this.winner = null;
+        this.message = "";
     }
     
     public void printBoard(){
@@ -58,12 +60,15 @@ public class Board {
     public boolean gameOver(){
         if (threeInARow("X")){
             System.out.println("Game over, the winner is " + this.winner);
+            this.message = "Game over, the winner is " + this.winner;
             return true;
         } else if(threeInARow("O")){
             System.out.println("Game over, the winner is " + this.winner);
+            this.message = "Game over, the winner is " + this.winner;
             return true;
         } else if(tokens==9){
             System.out.println("Game over, the board is full");
+            this.message = "Game over, the board is full";
             return true;
         }
         return false;
@@ -99,19 +104,41 @@ public class Board {
         return false;
     }
     
-    public void setToBoard(String token, int position){
-        if(!validMove(position)){
-            int newPosition = Integer.parseInt(scanner.nextLine());
-            setToBoard(token, newPosition);
-        } else {
+    public void setToBoard(String token, int x, int y){
+//        if(!validMove(position(x,y))){
+//            int newPositionX = Integer.parseInt(scanner.nextLine());
+//            int newPositionY = Integer.parseInt(scanner.nextLine());
+//            setToBoard(token, newPositionX,newPositionY);
+//        } else {
             tokens++;
-            board.set(position-1, "["+token+"]");
+            board.set(position(x,y)-1, "["+token+"]");
             printBoard();
+//        }
+    }
+    
+    public int position(int x, int y){
+        int position = 0;               
+        if(y==1){
+            position = x;
+        } else if (y==2){
+            position = x+3;
+        } else {
+            position = x + 6;
         }
+        return position;
     }
     
     public String getWinner(){
         return this.winner;
     }
+    
+    public int getTokens(){
+        return tokens;
+    }
+    
+    public String getMessage(){
+        return this.message;
+    }
+    
 }
 

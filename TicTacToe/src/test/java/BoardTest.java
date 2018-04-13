@@ -10,7 +10,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
-import tictactoe.Board;
+import tictactoe.domain.Board;
 
 /**
  *
@@ -40,92 +40,92 @@ public class BoardTest {
     public void tearDown() {
     }
     
-    @Test
-    public void validMoveTooSmallANumber(){
-        assertEquals(board.validMove(0),false);
-    }
+//    @Test
+//    public void validMoveTooSmallANumber(){
+//        assertEquals(board.validMove(0),false);
+//    }
+//    
+//    @Test
+//    public void validMoveTooBigANumber(){
+//        assertEquals(board.validMove(10),false);   
+//    }
     
-    @Test
-    public void validMoveTooBigANumber(){
-        assertEquals(board.validMove(10),false);   
-    }
-    
-    @Test
-    public void validMovePositionAlreadyTaken(){
-        board.setToBoard("X", 1);
-        assertEquals(board.validMove(1),false);
-        
-    }
-    
-    @Test
-    public void validMoveTrue(){
-        assertEquals(board.validMove(1),true);
-        
-    }
-    
+//    @Test
+//    public void validMovePositionAlreadyTaken(){
+//        board.setToBoard("X", 1);
+//        assertEquals(board.validMove(1),false);
+//        
+//    }
+//    
+//    @Test
+//    public void validMoveTrue(){
+//        assertEquals(board.validMove(1),true);
+//        
+//    }
+//    
     @Test
     public void threeInARowFirstRow(){
-        board.setToBoard("X", 1);
-        board.setToBoard("X", 2);
-        board.setToBoard("X", 3);
+        board.setToBoard("X", 1,1);
+        board.setToBoard("X", 2,1);
+        board.setToBoard("X", 3,1);
         assertEquals(board.threeInARow("X"),true);
         
     }
     
     @Test
     public void threeInARowSecondRow(){
-        board.setToBoard("X", 4);
-        board.setToBoard("X", 5);
-        board.setToBoard("X", 6);
+        board.setToBoard("X", 1,2);
+        board.setToBoard("X", 2,2);
+        board.setToBoard("X", 3,2);
         assertEquals(board.threeInARow("X"),true);
         
     }
     
     @Test
     public void threeInARowThirdRow(){
-        board.setToBoard("X", 7);
-        board.setToBoard("X", 8);
-        board.setToBoard("X", 9);
+        board.setToBoard("X", 1,3);
+        board.setToBoard("X", 2,3);
+        board.setToBoard("X", 3,3);
         assertEquals(board.threeInARow("X"),true);
     }
     
     @Test
     public void threeInARowFirstColumn(){
-        board.setToBoard("X", 1);
-        board.setToBoard("X", 4);
-        board.setToBoard("X", 7);
+        board.setToBoard("X", 1,1);
+        board.setToBoard("X", 1,2);
+        board.setToBoard("X", 1,3);
         assertEquals(board.threeInARow("X"),true);
     }
     
     @Test
     public void threeInARowSecondColumn(){
-        board.setToBoard("X", 2);
-        board.setToBoard("X", 5);
-        board.setToBoard("X", 8);
+        board.setToBoard("X", 2,1);
+        board.setToBoard("X", 2,2);
+        board.setToBoard("X", 2,3);
         assertEquals(board.threeInARow("X"),true);
     }
     
     @Test
     public void threeInARowThirdColumn(){
-        board.setToBoard("X", 3);
-        board.setToBoard("X", 6);
-        board.setToBoard("X", 9);
+        board.setToBoard("X", 3,1);
+        board.setToBoard("X", 3,2);
+        board.setToBoard("X", 3,3);
         assertEquals(board.threeInARow("X"),true);
     }
     
     @Test
     public void threeInARowDiagonalLeftToRight(){
-        board.setToBoard("X", 1);
-        board.setToBoard("X", 5);
-        board.setToBoard("X", 9);
+        board.setToBoard("X", 1,1);
+        board.setToBoard("X", 2,2);
+        board.setToBoard("X", 3,3);
         assertEquals(board.threeInARow("X"),true);
     }
     
     @Test
     public void threeInARowDiagonalRightToLeft(){
-        board.setToBoard("X", 3);
-        board.setToBoard("X", 5);
-        board.setToBoard("X", 7);
+        board.setToBoard("X", 3,1);
+        board.setToBoard("X", 2,2);
+        board.setToBoard("X", 1,3);
         assertEquals(board.threeInARow("X"),true);
     }
     
@@ -136,62 +136,62 @@ public class BoardTest {
     
     @Test
     public void gameOverFullBoard(){
-        board.setToBoard("X", 1);
-        board.setToBoard("O", 2);
-        board.setToBoard("X", 3);
-        board.setToBoard("O", 4);
-        board.setToBoard("X", 5);
-        board.setToBoard("O", 7);
-        board.setToBoard("X", 6);
-        board.setToBoard("O", 9);
-        board.setToBoard("X", 8);
+        board.setToBoard("X", 1,1);
+        board.setToBoard("O", 2,1);
+        board.setToBoard("X", 3,1);
+        board.setToBoard("O", 1,2);
+        board.setToBoard("X", 2,2);
+        board.setToBoard("O", 1,3);
+        board.setToBoard("X", 3,2);
+        board.setToBoard("O", 3,3);
+        board.setToBoard("X", 2,3);
         assertEquals(board.gameOver(),true);
     }
     
     @Test
     public void gameOverXWinsTrue(){
-        board.setToBoard("X", 1);
-        board.setToBoard("O", 2);
-        board.setToBoard("X", 3);
-        board.setToBoard("O", 4);
-        board.setToBoard("X", 5);
-        board.setToBoard("O", 6);
-        board.setToBoard("X", 7);
+        board.setToBoard("X", 1,1);
+        board.setToBoard("O", 2,1);
+        board.setToBoard("X", 3,1);
+        board.setToBoard("O", 1,2);
+        board.setToBoard("X", 2,2);
+        board.setToBoard("O", 3,2);
+        board.setToBoard("X", 1,3);
         assertEquals(board.gameOver(),true);
     }
     
     @Test
     public void gameOverXWinsWinnerIsX(){
-        board.setToBoard("X", 1);
-        board.setToBoard("O", 2);
-        board.setToBoard("X", 3);
-        board.setToBoard("O", 4);
-        board.setToBoard("X", 5);
-        board.setToBoard("O", 6);
-        board.setToBoard("X", 7);
+        board.setToBoard("X", 1,1);
+        board.setToBoard("O", 2,1);
+        board.setToBoard("X", 3,1);
+        board.setToBoard("O", 1,2);
+        board.setToBoard("X", 2,2);
+        board.setToBoard("O", 3,2);
+        board.setToBoard("X", 1,3);
         board.gameOver();
         assertEquals(board.getWinner(),"X");
     }
     
     @Test
     public void gameOverOWinsTrue(){
-        board.setToBoard("X", 1);
-        board.setToBoard("O", 2);
-        board.setToBoard("X", 3);
-        board.setToBoard("O", 5);
-        board.setToBoard("X", 4);
-        board.setToBoard("O", 8);
+        board.setToBoard("X", 1,1);
+        board.setToBoard("O", 2,1);
+        board.setToBoard("X", 3,1);
+        board.setToBoard("O", 2,2);
+        board.setToBoard("X", 1,2);
+        board.setToBoard("O", 2,3);
         assertEquals(board.gameOver(),true);
     }
     
     @Test
     public void gameOverXWinsWinnerIsO(){
-        board.setToBoard("X", 1);
-        board.setToBoard("O", 2);
-        board.setToBoard("X", 3);
-        board.setToBoard("O", 5);
-        board.setToBoard("X", 4);
-        board.setToBoard("O", 8);
+        board.setToBoard("X", 1,1);
+        board.setToBoard("O", 2,1);
+        board.setToBoard("X", 3,1);
+        board.setToBoard("O", 2,2);
+        board.setToBoard("X", 1,2);
+        board.setToBoard("O", 2,3);
         board.gameOver();
         assertEquals(board.getWinner(),"O");
     }
