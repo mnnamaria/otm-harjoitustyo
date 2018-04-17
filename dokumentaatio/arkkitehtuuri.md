@@ -1,1 +1,1 @@
-![alt text](dokumentaatio/Kuvat/AlustavaLuokkakaavio.jpg)
+![picture](dokumentaatio/Kuvat/AlustavaLuokkakaavio.jpg)
