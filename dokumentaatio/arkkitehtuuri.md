@@ -1,1 +1,1 @@
-![alt text](https://aijaa.com/img/b/00633/14553356.jpg)
+<img src="https://raw.githubusercontent.com/mnnamaria/otm-harjoitustyo/master/dokumentaatio/Kuvat/AlustavaLuokkakaavio.jpg" width="750">
