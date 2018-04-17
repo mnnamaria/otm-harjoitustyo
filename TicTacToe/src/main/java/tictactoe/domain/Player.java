@@ -10,13 +10,14 @@ package tictactoe.domain;
  * @author minnahir
  */
 public class Player {
+
     private String token;
-    
-    public Player(String token){
-        this.token=token;
+
+    public Player(String token) {
+        this.token = token;
     }
-    
-    public String getToken(){
+
+    public String getToken() {
         return this.token;
     }
 }
