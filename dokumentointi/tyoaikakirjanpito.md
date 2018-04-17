@@ -7,3 +7,6 @@
 | | 2 | Testien tekeminen aloitettu
 |11.4. | 6 | JavaFX:ään tutustuminen, graafisen käyttöliittymän teko aloitettu
 |12.4. | 5 | Graafisen käyttöliittymän tekoa, refaktrointia, testien muokkausta
+|16.4. | 1 | Checkstyle otettu käyttöön
+|17.4. | 2 | Refaktorointia, testejä, arkkitehtuurikuvaus
+|yht| 25 |
