@@ -1,1 +1,1 @@
-/home/minnahir/Desktop/AlustavaLuokkakaavio.jpg
+![alt text](dokumentaatio/Kuvat/AlustavaLuokkakaavio.jpg)
