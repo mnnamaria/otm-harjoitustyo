@@ -6,6 +6,8 @@
 ## Käyttäjät
 Pelin perusversiossa on vain yksi käyttäjä, joka asettaa vuorotellen pelilaudalle X:n tai O:n.
 
+Myöhemmässä versiossa käyttäjä pelaa tietokonetta vastaan, jolloin käyttäjä asettaa pelilaudalle X:n ja tietokone O:n.
+
 ## Perusversion toiminnallisuudet
 * Aluksi kaikki ruudut ovat tyhjiä
 * Pelimerkit X ja O tulee asettaa laudalle vuorotellen
@@ -17,7 +19,6 @@ Pelin perusversiossa on vain yksi käyttäjä, joka asettaa vuorotellen pelilaud
 ## Jatkokehitysideoita
 * Pelit tallennetaan myöhempää tarkastelua varten
 * Perusversion monimutkaistaminen
-  * Peli konetta vastaan
   * Peli isommalla laudalla
   * Peli mielivaltaisen kokoisella laudalla
   * Erilaiset ristinollan muunnelmat, esimerkiksi
