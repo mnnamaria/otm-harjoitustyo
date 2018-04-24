@@ -9,4 +9,6 @@
 |12.4. | 5 | Graafisen käyttöliittymän tekoa, refaktrointia, testien muokkausta
 |16.4. | 1 | Checkstyle otettu käyttöön
 |17.4. | 2 | Refaktorointia, testejä, arkkitehtuurikuvaus
-|yht| 25 |
+|23.4. | 2 | Tutustumista erilaisiin mahdollisuuksiin toteuttaa tekoäly ristinollassa
+|24.4. | 8 | Random-tekoälyn toteuttaminen ja refaktorointia, jar-tiedosto, release, sekvenssikaavio
+|yht| 35 |
