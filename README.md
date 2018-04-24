@@ -40,3 +40,12 @@ Mahdolliset virheilmoitukset selviävät suorittamalla projektihakemistossa kome
 ```
 chromium-browser target/site/checkstyle.html
 ```
+### Suoritettavan jarin generointi
+
+Komento
+
+```
+mvn package
+```
+
+generoi hakemistoon _target_ suoritettavan jar-tiedoston _TicTacToe-1.0-SNAPSHOT.jar_
