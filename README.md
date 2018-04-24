@@ -1,13 +1,13 @@
 # TicTacToe
 
-Harjoitustyö kurssille Ohjelmistotekniikan menetelmät
+Ristinollapeli harjoitustyönä kurssille Ohjelmistotekniikan menetelmät
 
 ## Dokumentaatio
-[Vaatimusmäärittely](https://github.com/mnnamaria/otm-harjoitustyo/blob/master/dokumentointi/alustavamaarittely.md)
+[Vaatimusmäärittely](https://github.com/mnnamaria/otm-harjoitustyo/blob/master/dokumentaatio/alustavamaarittely.md)
 
 [Arkkitehtuurikuvaus](https://github.com/mnnamaria/otm-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
 
-[Työaikakirjanpito](https://github.com/mnnamaria/otm-harjoitustyo/blob/master/dokumentointi/tyoaikakirjanpito.md)
+[Työaikakirjanpito](https://github.com/mnnamaria/otm-harjoitustyo/blob/master/dokumentaatio/tyoaikakirjanpito.md)
 
 ## Releaset
 [Viikko 5](https://github.com/mnnamaria/otm-harjoitustyo/releases/tag/viikko5)
