@@ -31,32 +31,6 @@ public class Board {
         this.message = "";
     }
 
-//    graphic user interface doesn't need use method
-//    public void printBoard() {
-//
-//        System.out.println("----------");
-//        System.out.println("");
-//        for (int j = 0; j < 9; j++) {
-//            System.out.print(board.get(j));
-//            if ((j + 1) % 3 == 0) {
-//                System.out.println("\n");
-//            }
-//        }
-//        System.out.println("----------");
-//
-//    }
-//    graphic user interface doesn't need use this method
-//    public boolean validMove(int position) {
-//        if (position < 1 || position > 9) {
-//            System.out.println("Number not in range (1-9), choose another position:");
-//            return false;
-//        } else if (!board.get(position - 1).equals("[ ]")) {
-//            System.out.println("Position already taken, choose another one:");
-//            return false;
-//        } else {
-//            return true;
-//        }
-//    }
     public boolean gameOver() {
         if (threeInARow("X")) {
             System.out.println("Game over, the winner is " + this.winner);
@@ -105,16 +79,8 @@ public class Board {
     }
 
     public void setToBoard(String token, int x, int y) {
-//        checking not necessary when using graphic user interface
-//        if(!validMove(position(x,y))){
-//            int newPositionX = Integer.parseInt(scanner.nextLine());
-//            int newPositionY = Integer.parseInt(scanner.nextLine());
-//            setToBoard(token, newPositionX,newPositionY);
-//        } else {
         tokens++;
         board.set(position(x, y) - 1, "[" + token + "]");
-//        printBoard();
-//        }
     }
 
     public int position(int x, int y) {
@@ -129,6 +95,16 @@ public class Board {
         return position;
     }
 
+    public ArrayList<Integer> emptySpots() {
+        ArrayList<Integer> empty = new ArrayList<Integer>();
+        for (int i = 0; i < 9; i++) {
+            if (this.board.get(i).equals("[ ]")) {
+                empty.add(i + 1);
+            }
+        }
+        return empty;
+    }
+
     public int getTokens() {
         return tokens;
     }
@@ -136,8 +112,8 @@ public class Board {
     public String getMessage() {
         return this.message;
     }
-    
-    public String getWinner(){
+
+    public String getWinner() {
         return this.winner;
     }
 

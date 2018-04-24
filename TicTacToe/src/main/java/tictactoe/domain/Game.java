@@ -11,7 +11,7 @@ package tictactoe.domain;
  */
 import java.util.Scanner;
 
-// text user interface
+// text user interface, not used anymore
 public class Game {
 
     private Board board;

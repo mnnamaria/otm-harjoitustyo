@@ -24,6 +24,7 @@ import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.text.Font;
+import tictactoe.domain.ArtificialIntelligence;
 
 public class TicTacToeUi extends Application {
 
@@ -35,6 +36,7 @@ public class TicTacToeUi extends Application {
     @Override
     public void init() throws Exception {
         ticTacToeBoard = new Board();
+
         buttonList = new ArrayList<Button>();
     }
 
@@ -51,8 +53,8 @@ public class TicTacToeUi extends Application {
         upperLabel.setFont(Font.font("Monospaced", 14));
         borderPane.setTop(upperLabel);
 
-        for (int x = 1; x <= 3; x++) {
-            for (int y = 1; y <= 3; y++) {
+        for (int y = 1; y <= 3; y++) {
+            for (int x = 1; x <= 3; x++) {
                 int xCoordinate = x;
                 int yCoordinate = y;
 
@@ -66,16 +68,8 @@ public class TicTacToeUi extends Application {
 
                         String token = "";
                         String whoseTurn = "";
-                        if (ticTacToeBoard.getTokens() % 2 == 0) {
-                            token = "X";
-                            ticTacToeBoard.setToBoard(token, xCoordinate, yCoordinate);
-                            whoseTurn = "O plays, choose an empty position:";
-                        } else {
-                            token = "O";
-                            ticTacToeBoard.setToBoard(token, xCoordinate, yCoordinate);
-                            whoseTurn = "X plays, choose an empty position:";
-                        }
-                        upperLabel.setText(whoseTurn);
+                        token = "X";
+                        ticTacToeBoard.setToBoard("X", xCoordinate, yCoordinate);
 
                         button.setText(token);
                         button.setDisable(true);
@@ -90,9 +84,28 @@ public class TicTacToeUi extends Application {
                             upperLabel.setText(ticTacToeBoard.getMessage());
                         }
 
+                        token = "O";
+                        ArtificialIntelligence aI = new ArtificialIntelligence(ticTacToeBoard);
+                        int random = aI.generateMove();
+                        buttonList.get(random - 1).setText(token);
+                        buttonList.get(random - 1).setDisable(true);
+                        ticTacToeBoard.setToBoard(token, aI.getX(random), aI.getY(random));
+                        if (ticTacToeBoard.gameOver()) {
+                            int i = 0;
+                            while (i < buttonList.size()) {
+                                buttonList.get(i).setDisable(true);
+                                i++;
+                            }
+
+                            upperLabel.setText(ticTacToeBoard.getMessage());
+                        }
+
                     }
+
                 });
+
                 grid.add(button, x, y);
+
             }
         }
         Scene scene = new Scene(borderPane);
