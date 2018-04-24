@@ -9,6 +9,8 @@ Harjoitustyö kurssille Ohjelmistotekniikan menetelmät
 
 [Työaikakirjanpito](https://github.com/mnnamaria/otm-harjoitustyo/blob/master/dokumentointi/tyoaikakirjanpito.md)
 
+## Releaset
+[Viikko 5](https://github.com/mnnamaria/otm-harjoitustyo/releases/tag/viikko5)
 
 ## Komentorivitoiminnot
 
