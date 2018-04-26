@@ -11,4 +11,6 @@
 |17.4. | 2 | Refaktorointia, testejä, arkkitehtuurikuvaus
 |23.4. | 2 | Tutustumista erilaisiin mahdollisuuksiin toteuttaa tekoäly ristinollassa
 |24.4. | 8 | Random-tekoälyn toteuttaminen ja refaktorointia, jar-tiedosto, release, sekvenssikaavio
-|yht| 35 |
+|25.4. |1,5| Square-luokan luominen, refaktorointia
+|26.4. | 3 | Sovelluslogiikkaa muutettu (ArrayList taulukoksi), voitontarkistamismetodi pilkottu, laajennettavuutta parannettu (laudan koko ja voittokriteeri)
+|yht| 39,5 |

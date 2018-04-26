@@ -21,7 +21,7 @@ public class Game {
     private Scanner scanner;
 
     public Game() {
-        this.board = new Board();
+//        this.board = new Board();
         this.playerX = new Player("X");
         this.playerO = new Player("O");
         this.moves = 1;

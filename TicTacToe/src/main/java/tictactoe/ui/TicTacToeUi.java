@@ -29,15 +29,22 @@ import tictactoe.domain.ArtificialIntelligence;
 public class TicTacToeUi extends Application {
 
     private Board ticTacToeBoard;
-    private ArrayList<Button> buttonList;
-    private String turn;
+    private Button[][] buttonTable;
+    private ArtificialIntelligence computerPlayer;
+    private Player humanPlayer;
     private String message;
+    private int gameSize;
+    private int tokensInARow;
 
     @Override
     public void init() throws Exception {
-        ticTacToeBoard = new Board();
+        this.gameSize = 4;
+        this.tokensInARow = 4;
+        ticTacToeBoard = new Board(gameSize, tokensInARow);
+        buttonTable = new Button[gameSize][gameSize];
+        computerPlayer = new ArtificialIntelligence(ticTacToeBoard, "O");
+        humanPlayer = new Player("X");
 
-        buttonList = new ArrayList<Button>();
     }
 
     @Override
@@ -49,55 +56,56 @@ public class TicTacToeUi extends Application {
         BorderPane borderPane = new BorderPane();
         borderPane.setCenter(grid);
 
-        Label upperLabel = new Label("X plays, choose an empty position:");
+        Label upperLabel = new Label("Choose an empty position:");
         upperLabel.setFont(Font.font("Monospaced", 14));
         borderPane.setTop(upperLabel);
 
-        for (int y = 1; y <= 3; y++) {
-            for (int x = 1; x <= 3; x++) {
+        for (int y = 1; y <= gameSize; y++) {
+            for (int x = 1; x <= gameSize; x++) {
                 int xCoordinate = x;
                 int yCoordinate = y;
 
                 Button button = new Button(" ");
-                buttonList.add(button);
+                buttonTable[x - 1][y - 1] = button;
+
                 button.setFont(Font.font("Monospaced", 50));
                 button.setOnAction(new EventHandler<ActionEvent>() {
 
                     @Override
                     public void handle(ActionEvent event) {
 
-                        String token = "";
-                        String whoseTurn = "";
-                        token = "X";
-                        ticTacToeBoard.setToBoard("X", xCoordinate, yCoordinate);
+                        ticTacToeBoard.setToBoard(humanPlayer.getToken(), xCoordinate - 1, yCoordinate - 1);
 
-                        button.setText(token);
+                        button.setText(humanPlayer.getToken());
                         button.setDisable(true);
 
                         if (ticTacToeBoard.gameOver()) {
-                            int i = 0;
-                            while (i < buttonList.size()) {
-                                buttonList.get(i).setDisable(true);
-                                i++;
+                            for (int i = 0; i < gameSize; i++) {
+                                for (int j = 0; j < gameSize; j++) {
+                                    buttonTable[i][j].setDisable(true);
+                                }
                             }
 
                             upperLabel.setText(ticTacToeBoard.getMessage());
                         }
+                        if (!ticTacToeBoard.gameOver()) {
+                            String randomLocation = computerPlayer.generateMove();
+                            int column = Character.getNumericValue(randomLocation.charAt(0));
+                            int row = Character.getNumericValue(randomLocation.charAt(2));
+                            buttonTable[row][column].setText(computerPlayer.getToken());
+                            buttonTable[row][column].setDisable(true);
 
-                        token = "O";
-                        ArtificialIntelligence aI = new ArtificialIntelligence(ticTacToeBoard);
-                        int random = aI.generateMove();
-                        buttonList.get(random - 1).setText(token);
-                        buttonList.get(random - 1).setDisable(true);
-                        ticTacToeBoard.setToBoard(token, aI.getX(random), aI.getY(random));
-                        if (ticTacToeBoard.gameOver()) {
-                            int i = 0;
-                            while (i < buttonList.size()) {
-                                buttonList.get(i).setDisable(true);
-                                i++;
+                            ticTacToeBoard.setToBoard(computerPlayer.getToken(), row, column);
+
+                            if (ticTacToeBoard.gameOver()) {
+                                for (int i = 0; i < gameSize; i++) {
+                                    for (int j = 0; j < gameSize; j++) {
+                                        buttonTable[i][j].setDisable(true);
+                                    }
+                                }
+
+                                upperLabel.setText(ticTacToeBoard.getMessage());
                             }
-
-                            upperLabel.setText(ticTacToeBoard.getMessage());
                         }
 
                     }
@@ -112,6 +120,7 @@ public class TicTacToeUi extends Application {
         primaryStage.setScene(scene);
         primaryStage.show();
     }
+
 
     public static void main(String[] args) {
         launch(args);

@@ -33,7 +33,7 @@ public class BoardTest {
     
     @Before
     public void setUp() {
-        this.board = new Board();
+        this.board = new Board(3,3);
     }
     
     @After
