@@ -7,6 +7,8 @@ Ristinollapeli harjoitustyönä kurssille Ohjelmistotekniikan menetelmät
 
 [Arkkitehtuurikuvaus](https://github.com/mnnamaria/otm-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
 
+[Käyttöohje](https://github.com/mnnamaria/otm-harjoitustyo/blob/master/dokumentaatio/kayttoohje.md)
+
 [Työaikakirjanpito](https://github.com/mnnamaria/otm-harjoitustyo/blob/master/dokumentaatio/tyoaikakirjanpito.md)
 
 ## Releaset
