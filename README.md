@@ -11,6 +11,7 @@ Ristinollapeli harjoitustyönä kurssille Ohjelmistotekniikan menetelmät
 
 ## Releaset
 [Viikko 5](https://github.com/mnnamaria/otm-harjoitustyo/releases/tag/viikko5)
+[Viikko 6](https://github.com/mnnamaria/otm-harjoitustyo/releases/tag/viikko6)
 
 ## Komentorivitoiminnot
 
@@ -40,6 +41,17 @@ Mahdolliset virheilmoitukset selviävät suorittamalla projektihakemistossa kome
 ```
 chromium-browser target/site/checkstyle.html
 ```
+
+### JavaDoc
+
+JavaDoc generoidaan komennolla
+
+```
+mvn javadoc:javadoc
+```
+
+JavaDocia tarkastellaksesi avaa selaimella tiedosto _target/site/apidocs/index.html_
+
 ### Suoritettavan jarin generointi
 
 Komento
