@@ -1,7 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * Pelin pelaaja
  */
 package tictactoe.domain;
 
@@ -12,11 +10,19 @@ package tictactoe.domain;
 public class Player {
 
     private String token;
-
+/**
+ * Konstruktori luo pelaajan, jonka pelimerkiksi tulee käyttäjän antama syöte
+ * @param token pelaajan pelimerkki
+ */
+    
     public Player(String token) {
         this.token = token;
     }
 
+ /**
+ * Metodi palauttaa pelaajan pelimerkin
+ * @return pelimerkki
+ */
     public String getToken() {
         return this.token;
     }
