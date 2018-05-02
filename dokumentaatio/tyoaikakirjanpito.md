@@ -13,4 +13,6 @@
 |24.4. | 8 | Random-tekoälyn toteuttaminen ja refaktorointia, jar-tiedosto, release, sekvenssikaavio
 |25.4. |1,5| Square-luokan luominen, refaktorointia
 |26.4. | 3 | Sovelluslogiikkaa muutettu (ArrayList taulukoksi), voitontarkistamismetodi pilkottu, laajennettavuutta parannettu (laudan koko ja voittokriteeri)
-|yht| 39,5 |
+|30.4.| 4 | Käyttöliittymän rakennetta muokattu, napit tietokonetta ja ihmistä pelaamista varten
+|2.5. | 5 | Käyttöliittymän muokkaamista jatkettu, Boardin metodeja siistitty, testejä muokattu, JavaDoc, arkkitehtuurikuvaus, käyttöohje, release
+|yht| 48,5 |
