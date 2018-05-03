@@ -216,5 +216,13 @@ public class Board {
     public String getWinner() {
         return this.winner;
     }
+    
+    public int getBoardSize(){
+        return this.boardSize;
+    }
+    
+   public int getTokensInARow(){
+       return this.tokensInARow;
+   }
 
 }
