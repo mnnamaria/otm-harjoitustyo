@@ -187,7 +187,6 @@ public class Board {
                 if (board[j][i].getContents().equals(" ")) {
                     empty.add("" + i + "," + j);
                 }
-
             }
         }
         return empty;
