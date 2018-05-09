@@ -16,4 +16,5 @@
 |30.4.| 4 | Käyttöliittymän rakennetta muokattu, napit tietokonetta ja ihmistä vastaan pelaamista varten
 |2.5. | 5 | Käyttöliittymän muokkaamista jatkettu, Boardin metodeja siistitty, testejä muokattu, JavaDoc, arkkitehtuurikuvaus, käyttöohje, release
 |3.5. | 4 | Erilliset scenet ihmistä ja konetta vastaan pelaamiseen valmiiksi, pelimerkit ulkoisesta kirjastosta
-|yht| 52,5 |
+|9.5. | 6 | Testejä, checkstyle, uusi release, lopullinen käyttöohje, luokka-, pakkaus- ja sekvenssikaaviot, testausdokumentti, muut loppupalautuksen asiat
+|yht| 56,5 |
