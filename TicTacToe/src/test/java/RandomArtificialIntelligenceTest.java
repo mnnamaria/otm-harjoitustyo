@@ -10,12 +10,18 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import tictactoe.domain.Board;
+import tictactoe.domain.RandomArtificialIntelligence;
 
 /**
  *
  * @author minnahir
  */
 public class RandomArtificialIntelligenceTest {
+    RandomArtificialIntelligence randomArtificialIntelligence;
+    Board board;
+    
+    
     
     public RandomArtificialIntelligenceTest() {
     }
@@ -30,10 +36,18 @@ public class RandomArtificialIntelligenceTest {
     
     @Before
     public void setUp() {
+        this.board = new Board(4,4);
+        this.randomArtificialIntelligence = new RandomArtificialIntelligence(board, "O");
     }
     
     @After
     public void tearDown() {
+    }
+    
+    @Test 
+    
+    public void randomArtificialIntelligenceExtendsPlayerGetToken(){
+        assertEquals(randomArtificialIntelligence.getToken(), "O");
     }
 
     // TODO add test methods here.

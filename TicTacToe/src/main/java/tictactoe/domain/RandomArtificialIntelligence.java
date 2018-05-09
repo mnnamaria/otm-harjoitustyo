@@ -22,7 +22,7 @@ public class RandomArtificialIntelligence extends Player {
     
  /**
  * Metodi generoi tekoälypelaajan seuraavan siirron
- * @return move merkkijono, joka on muotoa "seuraavan siirron rivi, seuraavan siirron sarake"
+ * @return move merkkijono, joka on muotoa "seuraavan siirron rivi,seuraavan siirron sarake"
  */
 
     public String generateMove() {

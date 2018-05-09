@@ -52,10 +52,10 @@ public class Board {
  */
 
     public boolean gameOver() {
-        if (threeInARow("X")) {
+        if (fourInARow("X")) {
             this.message = "Game over, the winner is " + this.winner;
             return true;
-        } else if (threeInARow("O")) {
+        } else if (fourInARow("O")) {
             this.message = "Game over, the winner is " + this.winner;
             return true;
         } else if (tokens == boardSize * boardSize) {
@@ -71,7 +71,7 @@ public class Board {
  * @param pelimerkki
  * @return onko tarpeeksi monta peräkkäin
  */
-    public boolean threeInARow(String token) {
+    public boolean fourInARow(String token) {
         if (checkRows(token) || checkColumns(token) 
                 || checkFirstDiagonal(token) || checkSecondDiagonal(token)) {
             this.winner = token;
@@ -209,7 +209,7 @@ public class Board {
         return this.message;
     }
 
-    /**
+ /**
  * Metodi palauttaa voittavan pelimerkin
  * @return voittava pelimerkki (null, mikäli voittajaa ei ole)
  */
@@ -217,12 +217,21 @@ public class Board {
         return this.winner;
     }
     
-    public int getBoardSize(){
+/**
+ * Metodi palauttaa pelilaudan koon
+ * @return pelilaudan koko
+ */
+    public int getBoardSize() {
         return this.boardSize;
     }
     
-   public int getTokensInARow(){
-       return this.tokensInARow;
-   }
+    
+ /**
+ * Metodi kertoo, kuinka monta samaa merkkiä pitää saada peräkkäin
+ * @return montako merkkiä peräkkäin tarvitaan pelin voittoon
+ */
+    public int getTokensInARow() {
+        return this.tokensInARow;
+    }
 
 }

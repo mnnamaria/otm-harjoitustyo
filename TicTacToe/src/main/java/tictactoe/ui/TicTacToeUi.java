@@ -13,7 +13,6 @@ import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import tictactoe.domain.Board;
-import tictactoe.domain.Game;
 import tictactoe.domain.Player;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
@@ -67,9 +66,9 @@ public class TicTacToeUi extends Application {
         VBox primaryPane = new VBox(10);
         primaryPane.setPadding(new Insets(10));
 
-        Label textLabel = new Label("I want to play against:");
-        Button computerButton = new Button("Computer");
-        Button otherPlayerButton = new Button("Other player");
+        Label textLabel = new Label("Choose the number of players:");
+        Button computerButton = new Button("1 player");
+        Button otherPlayerButton = new Button("2 players");
 
         primaryPane.getChildren().addAll(textLabel, computerButton, otherPlayerButton);
         primaryScene = new Scene(primaryPane, 300, 300);
@@ -159,7 +158,7 @@ public class TicTacToeUi extends Application {
         borderPaneOtherPlayer.setCenter(otherPlayerGrid);
 
         Label upperLabel = new Label("X plays, choose an empty position:");
-        upperLabel.setFont(Font.font("Monospaced", 14));
+        upperLabel.setFont(Font.font("Monospaced", 15));
         borderPaneOtherPlayer.setTop(upperLabel);
 
         for (int y = 1; y <= ticTacToeBoard.getBoardSize(); y++) {
