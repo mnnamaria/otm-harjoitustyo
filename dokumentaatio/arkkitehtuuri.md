@@ -19,6 +19,7 @@ Sovelluslogiikan muodostavat pelilauta [Board](https://github.com/mnnamaria/otm-
 Pelilogiikka tapahtuu suurimmissa määrin luokassa Board. Sillä on esimerkiksi metodi fourInARow(String token), joka tarkistaa, onko tarvittava määrä samoja merkkejä jollakin pysty- tai vaakarivillä tai diagonaalilla. Metodi gameOver() edelleen tarkistaa, onko peli päättynyt ja asettaa tarvittaessa aiheesta kertovan viestin. Se myös pitää listaa pelilaudan tyhjistä ruuduista. Käyttöliittymän rakentava luokka TicTacToeUi vain kutsuu vaikkapa voitontarkistusmetodia.
 
 Ohjelman luokkarakenne on seuraava:
+
 <img src="https://github.com/mnnamaria/otm-harjoitustyo/blob/master/dokumentaatio/Kuvat/luokkakaavioFinal.jpg" width="300">
 
 
