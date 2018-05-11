@@ -1,7 +1,7 @@
 # Testausdokumentti
 Ohjelmaa on testattu JUnitilla sekä manuaalisesti pelaamalla peliä. 
 
-## Yksikkötestit
+## Yksikkö- ja integraatiotestaus
 
 Tärkeimmän osan testausta muodostaa luokka [BoardTest](https://github.com/mnnamaria/otm-harjoitustyo/blob/master/TicTacToe/src/test/java/BoardTest.java), joka testaa pelilaudan toiminnallisuuksia esimerkkisyötteiden avulla.
 
