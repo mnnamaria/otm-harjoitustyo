@@ -18,6 +18,8 @@ Pelaajat X ja O asettavat pelimerkkinsä vuorotellen laudalle. Ruudun ylälaidan
 
 <img src="https://github.com/mnnamaria/otm-harjoitustyo/blob/master/dokumentaatio/Kuvat/kaksinpeli.JPG" width="300">
 
+## Pelin päättyminen
+
 Mikäli peli päättyy jommankumman pelaajan voittoon tai siihen, että pelilauta on täysi, tulee siitä ilmoitus pelilaudan yläpuolelle.
 
 <img src="https://github.com/mnnamaria/otm-harjoitustyo/blob/master/dokumentaatio/Kuvat/X%20voitti.JPG" width="300">
